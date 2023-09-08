@@ -48,9 +48,37 @@ def infix2postfix(exp) :
             check =False
     
     return  formatItem(s.item)
-
-
+def infixToPrefix(exp):
+    string = ""
+    stack =  Stack()
+    length = len(exp)
+    dic= {"*": 3,"/":3,"(":1 ,"+" :2,"-":2}
+    for i in range(length):
+        if exp[i] not in "*+-/)(":
+            string += exp[i]
+        elif exp[i] == ")":
+            print(string)
+            while not stack.isEmpty() and stack.peek() != "(":
+                temp = stack.pop()
+                if dic[temp] >dic[stack.peek()] and not stack.isEmpty() and stack.peek() != "(":
+                    string = string[:-2]+  temp + string[-2:]
+                else:string = temp + string 
+            stack.pop()
+        else:
+            while not stack.isEmpty() and dic[exp[i]] < dic[stack.peek()]:
+                # print(string[:-2],stack.peek())
+                string = stack.pop() + string
+            stack.push(exp[i])
+    while not stack.isEmpty():
+        temp = stack.pop()
+        if not stack.isEmpty() and dic[temp] >dic[stack.peek()]  and stack.peek() != "(":
+            string = string[:-2]+  temp + string[-2:]
+        else:string = temp + string 
+    print(string)
+            
 print(" ***Infix to Postfix***")
 token = input("Enter Infix expression : ")
 print("PostFix : ")
-print(infix2postfix(token))
+print(infixToPrefix(token))
+#a/b*(c-d*e/f+(g-h))*i
+# ab/cde*f/-gh-+*i*
