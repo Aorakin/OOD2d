@@ -133,10 +133,6 @@ class LinkedList:
             self.tail = self.head = temp
         return "Success"
         
-
-            
-
-
 L = LinkedList()
 inp = input('Enter Input : ').split(',')
 for i in inp:

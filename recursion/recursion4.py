@@ -20,7 +20,6 @@ def mix(num,list):
         S = 1
         B = 0
         count = 0
-        print(recurloop(0,list))
         for i in range(length):
             count += (int(num[i]))
             if int(num[i]) == 1:
@@ -37,12 +36,6 @@ def bi(num,e):
     elif num//(2**e) ==0 or num//(2**e) == 1:
         return str(num//(2**e))+bi(num%(2**e),e-1)
 
-def recurloop(num,list):
-    size = len(list)
-    if num == size-1:
-        return size-1
-    else:
-        return recurloop(num+1,list)
 
 
 

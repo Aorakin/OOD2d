@@ -43,7 +43,6 @@ def partition(head,x):
         newcur.next = cur
     elif newcur == None:
         newcur = cur
-    # print(head)
     return head
         
 link= partition(head,3)

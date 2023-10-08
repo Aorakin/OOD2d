@@ -25,7 +25,6 @@ class LinkedList :
                 temp.next = newnode
             temp = temp.next
 
-
     def __str__(self):
         temp = ''
         cur = self.head

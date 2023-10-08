@@ -22,7 +22,6 @@ def generate_permutations(string,k,newlist):
     if length < Per:
         for i in range(length,k+length):
             result = result+string[i%string_size]
-        print(result)
         newlist.append(result)
         return generate_permutations(string,k,newlist)
     else:

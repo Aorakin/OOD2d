@@ -39,6 +39,6 @@ for i in range(inp):
     else :Alist.insert(0,str(i))
     Blist.append("|")
     Clist.append("|")
-print(Alist)
+# print(Alist)
 printformat(inp-1)
 # move(inp-1,"A","B","C",inp-1)

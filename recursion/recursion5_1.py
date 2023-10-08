@@ -15,8 +15,7 @@ def generate_permutations(string,k,pick,index):
         return []
     else : 
         permute1 = generate_permutations(string[:index]+string[index+1:],k,pick+string[index],0)
-        permute2 = generate_permutations(string,k,pick,index+1)
-    
+        permute2 = generate_permutations(string,k,pick,index+1)    
     return permute1 + permute2
 
 inp = input("Enter a string and k: ").split("/")

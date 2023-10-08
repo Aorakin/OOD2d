@@ -58,9 +58,6 @@ class linklist():
                 self.tail = precur
         self.count_size-=1
 
-
-        
-
     def deleteL(self,pos):
         count = 0
         cur = self.head
@@ -120,7 +117,6 @@ class linklist():
                 cur.prev = new_node
         self.count_size+=1
 
-
 newlinklist = linklist()
 Inp = input("Enter Input : ").split(",")
 check = 0
@@ -154,13 +150,9 @@ for i in range(len(Inp)):
         check = 1
     else:
         if Inp[i] == "L":
-            # if left >= newlinklist.size():
-            #     left = newlinklist.size()-2
             left+=1
             check = 1
         elif Inp[i] == "R":
-            # if right >= newlinklist.size():
-            #     right = newlinklist.size()-2
             right +=1
             check=1
 if right != 0  or left != 0 :

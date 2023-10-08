@@ -21,11 +21,9 @@
 string = input("enter : ")
 def parindrome(num):
     global string
-    print(num)
     if num >= (int(len(string)/2))-1:
         return True
     if string[num] != string[-(num+1)]:
         return False
     return parindrome(num+1)
-
 print(parindrome(0))

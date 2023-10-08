@@ -39,10 +39,11 @@ dict = {}
 for i in range(length) :
     dict[inp[i][:1]] = inp[i][2:]
 cur = inp[0][:1]
-# for i in range(length):
-#     if cur
+count = 0
+for i in range(length):
+    newlist.append(cur)
+    dict.pop(cur)
 
 
-
-#     cur = dict(cur)
+    cur = dict(cur)
 print(dict["10"] == None)

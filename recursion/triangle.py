@@ -10,5 +10,4 @@ def tri(num,maxnum):
         print("_"*(num-1) + "#"*(maxnum-num+1) )
         return tri(num-1,maxnum)
 inp = input("enter :")
-
 print(tri(abs(int(inp)),int(inp)))

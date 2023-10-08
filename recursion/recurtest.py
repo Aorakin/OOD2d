@@ -1,7 +1,7 @@
 def drawing(n,maxn):
     if n==1:
         return "*" 
-    first = sec = n*"*"
+    first = n*"*"
     if len(first)!= maxn:
         first +=" "*(maxn-n)
     print(first)

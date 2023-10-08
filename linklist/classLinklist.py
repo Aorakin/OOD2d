@@ -41,8 +41,7 @@ class linklist():
             while index == None and cur.next.next != None:
                 cur = cur.next
             num = cur.next
-            cur.next = None
-            
+            cur.next = None    
         else:
             if index == 0 :
                 num = self.head
@@ -75,14 +74,15 @@ class linklist():
                 cur = cur.next
             newnode.next  = cur.next
             cur.next = newnode
+        self.size+=1
+
+    def isEmpty(self):
+        if self.head :
+            return True
+        return False
 
 
-fah = "abse"
-def ijiof():
-    global fah
-    fah = fah[1:]
-    return fah
-print(ijiof())
+
 newlinklist = linklist()
 for i in [1,2,3,5,4,6,8]:
     newlinklist.append(i)
